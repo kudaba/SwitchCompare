@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="code.inl" />
+    <None Include="README.md" />
+    <None Include="docs\index.html">
+      <Filter>docs</Filter>
+    </None>
+    <None Include="docs\results.html.css">
+      <Filter>docs</Filter>
+    </None>
+    <None Include="docs\results.html.js">
+      <Filter>docs</Filter>
+    </None>
+    <None Include=".gitignore" />
+    <None Include="_config.yml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="docs">
+      <UniqueIdentifier>{cdf16a8e-fad8-485c-a19b-abfdfe960946}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
