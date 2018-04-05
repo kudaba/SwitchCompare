@@ -309,7 +309,7 @@ __int64 ExecutePass2(Parameter const* param, int(*pass)(int, int, int), int cons
 }
 __int64 ExecutePass3(Parameter const* param, int(*pass)(int, int, int), int const* indexMap)
 {
-	return ExecutePass<Command::Count2>(param, pass, indexMap);
+	return ExecutePass<Command::Count3>(param, pass, indexMap);
 }
 
 class ExampleHarness : public TestHarness
