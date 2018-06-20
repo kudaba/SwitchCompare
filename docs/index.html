@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf - 8">
-<link rel="stylesheet" type="text/css" href="results.html.css"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-<script src="results.html.js"></script>
 
-<!-- BootStrap css -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- TOC -->
-<link rel="stylesheet" href="https://rawgit.com/kudaba/bootstrap-toc/gh-pages/dist/bootstrap-toc.min.css">
-<!-- JQuery -->
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!-- add after bootstrap.min.js -->
-<script src="https://rawgit.com/kudaba/bootstrap-toc/gh-pages/dist/bootstrap-toc.min.js"></script>
+<head>
+    <meta charset="utf - 8">
+    <link rel="stylesheet" type="text/css" href="results.html.css">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="results.html.js"></script>
+
+    <!-- BootStrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- TOC -->
+    <link rel="stylesheet" href="https://rawgit.com/kudaba/bootstrap-toc/gh-pages/dist/bootstrap-toc.min.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- add after bootstrap.min.js -->
+    <script src="https://rawgit.com/kudaba/bootstrap-toc/gh-pages/dist/bootstrap-toc.min.js"></script>
 
 </head>
+
 <body>
     <div class="container">
         <div class="row">
@@ -25,9 +30,12 @@
                 <nav id="toc" data-spy="affix" data-toggle="toc" style="margin-top: 30px;"></nav>
             </div>
             <div class="col-sm-9">
-                <h1><a href='https://github.com/kudaba/SwitchCompare'>SwitchCompare</a></h1>
-                <p>Comparison of cost between different calling methods. Using the <a href='https://github.com/kudaba/CodeCompare'>CodeCompare</a> testing harness
-                I compared the following calling methods using 12, 24 and 36 different commands to see if there was a noticeable difference in cost:</p>
+                <h1>
+                    <a href='https://github.com/kudaba/SwitchCompare'>SwitchCompare</a>
+                </h1>
+                <p>Comparison of cost between different calling methods. Using the
+                    <a href='https://github.com/kudaba/CodeCompare'>CodeCompare</a> testing harness I compared the following calling methods using 12, 24 and 36 different
+                    commands to see if there was a noticeable difference in cost:</p>
                 <ul>
                     <li>Dense switch case</li>
                     <li>Sparse switch case</li>
@@ -36,14 +44,15 @@
                     <li>Std Functions</li>
                 </ul>
                 <p>
-                    I don't think there's a whole lot that can be assumed from these findings. I found that slight changes to the code could drastically affect the performance costs.
-                    there were times when virtual methods were faster than function pointers and where switch cases fell over. This is just the latest version of the results.
+                    I don't think there's a whole lot that can be assumed from these findings. I found that slight changes to the code could
+                    drastically affect the performance costs. there were times when virtual methods were faster than function
+                    pointers and where switch cases fell over. This is just the latest version of the results.
                 </p>
                 <h1 data-toc-text="Results">Results</h1>
-                y-axis is relative cost of different methods using noop as a baseline.<br/>
-                x-axis is number of iterations over each method.<br />
-                
-                Each test was run 10 times to reduce noise.<br />
+                y-axis is relative cost of different methods using noop as a baseline.
+                <br/> x-axis is number of iterations over each method.
+                <br /> Each test was run 10 times to reduce noise.
+                <br />
                 <table>
                     <tr>
                         <td>
@@ -79,27 +88,27 @@
             passes: [
                 {
                     name: "Dense Switch",
-                    results: [1.43538, 1.45664, 1.47669, 1.47317, 1.47376],
+                    results: [1.57281, 1.58904, 1.58124, 1.57901, 1.59512],
                     color: "rgba(46,145,73,1)"
                 },
                 {
                     name: "Function Pointer",
-                    results: [1.36496, 1.33488, 1.40073, 1.39676, 1.32461],
+                    results: [1.43558, 1.43536, 1.43544, 1.43355, 1.44403],
                     color: "rgba(131,241,229,1)"
                 },
                 {
                     name: "STD Function",
-                    results: [1.85794, 1.87837, 1.9018, 1.90338, 1.88942],
+                    results: [1.9568, 1.85776, 1.87029, 1.85403, 1.88587],
                     color: "rgba(40,117,195,1)"
                 },
                 {
                     name: "Sparse Switch",
-                    results: [1.46007, 1.48028, 1.48, 1.49289, 1.48487],
+                    results: [1.54079, 1.54036, 1.53882, 1.54285, 1.54698],
                     color: "rgba(58,62,77,1)"
                 },
                 {
                     name: "Virtual Method",
-                    results: [1.69748, 1.72538, 1.73392, 1.75037, 1.73619],
+                    results: [1.37637, 1.37829, 1.37601, 1.37683, 1.30132],
                     color: "rgba(187,18,199,1)"
                 },
                 {
@@ -116,27 +125,27 @@
             passes: [
                 {
                     name: "Dense Switch",
-                    results: [1.5427, 1.5498, 1.53699, 1.5565, 1.54271],
+                    results: [1.55962, 1.58753, 1.56056, 1.56215, 1.56935],
                     color: "rgba(46,145,73,1)"
                 },
                 {
                     name: "Function Pointer",
-                    results: [1.55636, 1.57763, 1.56511, 1.63336, 1.65102],
+                    results: [1.44699, 1.44906, 1.44969, 1.45062, 1.44783],
                     color: "rgba(131,241,229,1)"
                 },
                 {
                     name: "STD Function",
-                    results: [1.91609, 1.92636, 1.90669, 1.92601, 1.90928],
+                    results: [1.96084, 1.961, 1.96146, 1.96111, 1.96264],
                     color: "rgba(40,117,195,1)"
                 },
                 {
                     name: "Sparse Switch",
-                    results: [1.51912, 1.52634, 1.51134, 1.45278, 1.51213],
+                    results: [1.55606, 1.55386, 1.55531, 1.55599, 1.55609],
                     color: "rgba(58,62,77,1)"
                 },
                 {
                     name: "Virtual Method",
-                    results: [4.04047, 4.07177, 4.055, 4.05784, 4.06725],
+                    results: [4.32469, 4.16921, 4.2198, 4.25705, 4.32391],
                     color: "rgba(187,18,199,1)"
                 },
                 {
@@ -153,27 +162,27 @@
             passes: [
                 {
                     name: "Dense Switch",
-                    results: [1.55305, 1.55823, 1.50808, 1.54852, 1.55216],
+                    results: [1.7153, 1.7134, 1.71635, 1.62415, 1.71534],
                     color: "rgba(46,145,73,1)"
                 },
                 {
                     name: "Function Pointer",
-                    results: [1.62295, 1.54805, 1.56678, 1.54815, 1.65455],
+                    results: [2.50203, 2.59723, 2.67909, 2.51586, 2.45467],
                     color: "rgba(131,241,229,1)"
                 },
                 {
                     name: "STD Function",
-                    results: [1.91175, 1.91756, 1.90039, 1.84217, 1.91232],
+                    results: [2.50635, 2.51106, 2.51283, 2.51134, 2.51316],
                     color: "rgba(40,117,195,1)"
                 },
                 {
                     name: "Sparse Switch",
-                    results: [1.73401, 1.73429, 1.71878, 1.64309, 1.73266],
+                    results: [1.7664, 1.76411, 1.76565, 1.66978, 1.76184],
                     color: "rgba(58,62,77,1)"
                 },
                 {
                     name: "Virtual Method",
-                    results: [4.02008, 4.02409, 3.99483, 4.12959, 4.06058],
+                    results: [5.26157, 5.3002, 5.35039, 5.35456, 5.35607],
                     color: "rgba(187,18,199,1)"
                 },
                 {
@@ -182,7 +191,8 @@
                     color: "rgba(215,124,34,1)"
                 }
             ]
-        });
+        });
     </script>
 </body>
+
 </html>
